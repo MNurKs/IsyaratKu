@@ -1,0 +1,49 @@
+{
+  "name": "isyaratku2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "release": "react-native run-android --variant=release",
+    "watch": "echo 256 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 524288 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && watchman shutdown-server",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "reverse": "adb -s 43283e77ce40 reverse tcp:8081 tcp:8081",
+    "reverse2": "adb -s abf56ad17d73 reverse tcp:8081 tcp:8081",
+    "log": "adb logcat -s TEST:V",
+    "list-avd": "emulator -list-avds",
+    "run-avd": "emulator @Realme_XT_API_29"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.7.1",
+    "@react-navigation/stack": "^5.8.0",
+    "native-base": "^2.13.13",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-native": "0.63.1",
+    "react-native-camera-tflite": "0.0.3",
+    "react-native-easy-grid": "^0.2.2",
+    "react-native-gesture-handler": "^1.7.0",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-reanimated": "^1.10.1",
+    "react-native-safe-area-context": "^3.1.1",
+    "react-native-screens": "^2.9.0",
+    "react-native-text": "^1.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "7.10.5",
+    "@babel/runtime": "7.10.5",
+    "@react-native-community/eslint-config": "1.1.0",
+    "babel-jest": "25.5.1",
+    "eslint": "6.8.0",
+    "jest": "25.5.4",
+    "metro-react-native-babel-preset": "0.59.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
